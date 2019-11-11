@@ -75,12 +75,18 @@ public class TeleOp7615Skystone extends OpMode {
         double elvatorUpSpeed = .5;
         double elvatorDownSpeed = .2;
 
-        if (gamepad1.y)
+        if (gamepad1.y){
             robot.Hamm.setPosition(0);
             robot.Rory.setPosition(0);
-        if (gamepad1.a)
+        }
+        if (gamepad1.a) {
             robot.Hamm.setPosition(1);
             robot.Rory.setPosition(0);
+        }
+        if (gamepad1.x) {
+                robot.Lift.setPosition(1);
+        }
+
 /*
         while (gamepad1.y) {
             robot.Elevator1.setPower(elvatorUpSpeed);
